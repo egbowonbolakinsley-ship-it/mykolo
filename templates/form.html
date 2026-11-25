@@ -1,0 +1,14 @@
+{% extends "common.html" %}
+    {% block content %}
+    {% load crispy_forms_tags %}
+
+    <div class="container">
+        <form action="" class="col-md-5 p-3 border m-auto" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h3 class="text-center">Product Form</h3>
+            {{form|crispy}}
+            <button class="btn btn-dark w-100">submit</button>
+        </form>
+    </div>
+
+    {% endblock content %}
